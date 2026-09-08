@@ -12,133 +12,234 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2230832170672910');
+fbq('init', '29066990636235280');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2230832170672910&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=29066990636235280&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-  
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Badshah Broking Official</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+
+<title>Join Telegram Channel</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f2f2f2;
-    padding:20px;
+  margin:0;
+  overflow-x:hidden;
+  font-family:'Segoe UI','Noto Sans Devanagari',sans-serif;
+  background:#0b1220;
+  color:#e6edf3;
+  text-align:center;
 }
 
+/* ✅ CONTAINER (PC FIX) */
 .container{
-    max-width:600px;
-    margin:auto;
-    padding:30px 20px;
-    text-align:center;
-    color:#222;
-    background:
-    linear-gradient(
-        rgba(255,255,255,0.85),
-        rgba(255,255,255,0.95)
-    ),
-    url('https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg?semt=ais_hybrid&w=740')
-    no-repeat center center/cover;
-
-    border-radius:12px;
-    box-shadow:0 0 15px rgba(0,0,0,0.1);
+  width:100%;
+  max-width:480px;
+  margin:auto;
 }
 
-.profile-img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
-    border:4px solid #fff;
-    box-shadow:0 0 12px rgba(0,0,0,0.2);
+/* HEADER */
+.header{
+  display:flex;
+  align-items:center;
+  padding:8px;
+  font-size:12px;
 }
 
-.subtitle{
-    font-size:22px;
-    margin-bottom:8px;
-    color:#333;
-    font-weight:bold;
+/* LIVE */
+.live{
+  color:#ff4d4d;
+  font-weight:bold;
+  animation:blink 1s infinite;
+  margin-right:6px;
+}
+@keyframes blink{50%{opacity:0.4;}}
+
+/* MARKET */
+.market{
+  overflow:hidden;
+  flex:1;
 }
 
+.ticker{
+  display:flex;
+  width:max-content;
+  animation:tickerMove 20s linear infinite;
+}
+
+.ticker span{
+  white-space:nowrap;
+  padding-right:40px;
+}
+
+@keyframes tickerMove{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* WATCH */
+.watch{
+  color:#00e676;
+  margin-left:6px;
+}
+
+/* PROFILE */
+.profile{
+  margin-top:20px;
+  position:relative;
+  display:inline-block;
+}
+
+.profile img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:3px solid #0A66C2;
+  box-shadow:0 0 20px rgba(10,102,194,0.6);
+}
+
+/* VERIFIED */
+.verified{
+  position:absolute;
+  bottom:5px;
+  right:5px;
+  width:30px;
+  height:30px;
+}
+
+/* TITLE */
 .title{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:20px;
-    color:#111;
+  font-size:26px;
+  font-weight:700;
+  color:#00AEEF;
+  text-shadow:0 0 10px rgba(0,174,239,0.5);
+  margin-top:10px;
 }
 
-.btn{
-    display:inline-block;
-    margin:15px 0;
-    padding:14px 28px;
-    background:#0088cc;
-    color:#fff;
-    font-size:18px;
-    font-weight:600;
-    border-radius:8px;
-    text-decoration:none;
-    transition:.3s;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+.sub{
+  font-size:14px;
+  color:#9fb3c8;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    background:#0075b0;
+/* STATS */
+.stats{
+  font-size:15px;
+  margin:12px;
+  font-weight:bold;
 }
 
-.features{
-    text-align:left;
-    font-size:16px;
-    line-height:1.8;
-    margin-top:20px;
-    background:#f5f5f5;
-    padding:20px;
-    border-radius:8px;
-    color:#333;
+/* DESC */
+.desc{
+  font-size:15px;
+  padding:0 18px;
+  line-height:1.8;
+  color:#dce3ea;
 }
 
-.footer{
-    margin-top:25px;
-    font-size:13px;
-    color:#777;
+.highlight{
+  color:#00AEEF;
+  font-weight:700;
 }
 
-.footer a{
-    color:#25D366;
-    text-decoration:none;
+/* TAGS */
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin:15px;
 }
 
-@media(max-width:480px){
+.tag{
+  border:1px solid #0A66C2;
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:12px;
+  color:#00AEEF;
+}
 
-    .title{
-        font-size:24px;
-    }
+/* BOX */
+.box-container{
+  display:flex;
+  gap:8px;
+  padding:0 10px;
+  margin:15px 0;
+}
 
-    .subtitle{
-        font-size:18px;
-    }
+.box{
+  flex:1;
+  padding:12px;
+  font-size:12px;
+  border-radius:10px;
+  background:#111a2b;
+  border:1px solid #0A66C2;
+}
 
-    .btn{
-        width:100%;
-        font-size:16px;
-    }
+/* CTA */
+.cta button{
+  width:92%;
+  padding:16px;
+  font-size:16px;
+  border-radius:10px;
+  border:none;
+  background:linear-gradient(45deg,#0A66C2,#00AEEF);
+  color:white;
+  font-weight:bold;
+  animation:glowBtn 1.5s infinite alternate;
+}
 
-    .profile-img{
-        width:110px;
-        height:110px;
-    }
+@keyframes glowBtn{
+  from{box-shadow:0 0 10px #0A66C2;}
+  to{box-shadow:0 0 30px #00AEEF;}
+}
+
+/* TRUST */
+.trust{
+  margin:15px;
+  font-size:13px;
+  color:#b8c7d9;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  bottom:20px;
+  left:10px;
+  background:#111a2b;
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:12px;
+  box-shadow:0 0 10px #000;
+  display:none;
+  border:1px solid #0A66C2;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+  font-size:11px;
+  color:#8a9bb0;
+  padding:12px;
+}
+
+/* ✅ PC ONLY IMPROVEMENT */
+@media(min-width:768px){
+
+  .container{
+    margin-top:30px;
+    margin-bottom:30px;
+    border-radius:14px;
+    box-shadow:0 0 40px rgba(0,0,0,0.6);
+    overflow:hidden;
+  }
+
 }
 </style>
 </head>
@@ -147,42 +248,129 @@ body{
 
 <div class="container">
 
-    <img
-        src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
-        alt="Badshah Ji"
-        class="profile-img"
-    >
+<!-- HEADER -->
+<div class="header">
+  <div class="live">🔴 LIVE</div>
 
-    <h2 class="subtitle">ASIA'S NO 1 community</h2>
-
-    <h1 class="title">
-        👑 BADSHAH BROKING OFFICIAL 👑
-    </h1>
-
-    <a
-        href="https://telegram.me/+rzS80bqtr01iM2Zl"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn"
-    >
-        🚀 JOIN NOW FOR FREE
-    </a>
-
-    <div class="features">
-        ⚡ <b>Highly Qualified</b> and Certified Trader<br><br>
-
-        ⚡ <b>Asia's No.1</b> Best One-day Trader<br><br>
-
-        ⚡ Expert in <b>Daily Trading Graph Analysis</b><br><br>
-
-        ⚡ <b>FREE Reports</b> shared on Telegram<br><br>
-
-        ⚠️ <b>This channel is for educational purpose only.</b>
+  <div class="market">
+    <div class="ticker">
+      <span id="marketData"></span>
+      <span id="marketDataClone"></span>
     </div>
+  </div>
 
+  <div class="watch">👀 <span id="watchCount">1247</span></div>
+</div>
 
+<!-- PROFILE -->
+<div class="profile">
+  <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2026/09/LIVELONG-HARI.jpg">
+
+  <svg class="verified" viewBox="0 0 24 24">
+    <defs>
+      <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#00c6ff"/>
+        <stop offset="100%" stop-color="#0072ff"/>
+      </linearGradient>
+    </defs>
+    <circle cx="12" cy="12" r="11" fill="none" stroke="#00AEEF" stroke-width="2" opacity="0.6"/>
+    <circle cx="12" cy="12" r="9" fill="url(#badgeGrad)"/>
+    <path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2.2" fill="none"/>
+  </svg>
+</div>
+
+<!-- TITLE -->
+<div class="title">LIVELONG HARI </div>
+<div class="sub">OFFICIAL TRADING CHANNEL</div>
+
+<!-- STATS -->
+<div class="stats">
+  👥 <b>10,584+ Members</b> | 📊 Market Insights
+</div>
+
+<!-- DESC -->
+<div class="desc">
+  📊 <span class="highlight">मार्केट रिसर्च</span> और <span class="highlight">एनालिसिस</span> आधारित अपडेट <br>
+  💼 केवल <span class="highlight">एजुकेशनल उद्देश्य</span> <br>
+  ⚡ <span class="highlight">रिस्क मैनेजमेंट</span> आवश्यक
+</div>
+
+<!-- TAGS -->
+<div class="tags">
+  <div class="tag">📊 STOCKS</div>
+  <div class="tag">📉 INDEX</div>
+  <div class="tag">💹 F&O</div>
+  <div class="tag">🪙 CRYPTO</div>
+</div>
+
+<!-- BOX -->
+<div class="box-container">
+  <div class="box">👥 10K+ USERS</div>
+  <div class="box">📈 DAILY UPDATES</div>
+  <div class="box">🆓 FREE ACCESS</div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <button onclick="joinNow()">🚀 JOIN CHANNEL — IT'S FREE</button>
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+  🛡️ Risk Management Guidance <br>
+  📊 Daily Market Analysis <br>
+  ⚡ Timely Trade Alerts
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup"></div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+Disclaimer: This channel is for educational and informational purposes only.
+</div>
 
 </div>
+
+<script>
+
+// SAME JS
+function updateMarket(){
+  let items=["NIFTY","BANKNIFTY","BTC"];
+  let text="";
+  items.forEach(i=>{
+    let change=(Math.random()*1-0.5).toFixed(2);
+    let up=change>0;
+    text+=`${i} <span style="color:${up?'#00ff88':'#ff4d4d'}">${up?'▲':'▼'} ${Math.abs(change)}%</span> | `;
+  });
+  document.getElementById("marketData").innerHTML=text;
+  document.getElementById("marketDataClone").innerHTML=text;
+}
+updateMarket();
+setInterval(updateMarket,6000);
+
+let watch=1247;
+setInterval(()=>{
+  watch+=Math.floor(Math.random()*2);
+  document.getElementById("watchCount").innerText=watch;
+},3000);
+
+let names=["Rahul","Amit","Vikas","Suresh","Rohit"];
+function showPopup(){
+  let name=names[Math.floor(Math.random()*names.length)];
+  let amount=Math.floor(Math.random()*50+10)*1000;
+  let popup=document.getElementById("popup");
+  popup.innerHTML=`💰 ${name} made profit ₹${amount}`;
+  popup.style.display="block";
+  setTimeout(()=>{popup.style.display="none";},3000);
+}
+setInterval(showPopup,7000);
+
+function joinNow(){
+  window.location.href="https://t.me/+BuBhuRFRHoY5Zjdl";
+}
+
+</script>
 
 </body>
 </html>
