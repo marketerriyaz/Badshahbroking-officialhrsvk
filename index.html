@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <!-- Meta Pixel Code -->
 <script>
@@ -13,46 +14,60 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1757934301898861');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+
+<noscript>
+<img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
-/></noscript>
+/>
+</noscript>
 <!-- End Meta Pixel Code -->
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Free Telegram Channel</title>
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      overflow-x: hidden;
-    }
 
-    .video-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    .video-bg video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.12;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }.card {
+<title>Join Free Telegram Channel</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  overflow-x: hidden;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -104,10 +119,40 @@ ul li::before {
   font-size: 1rem;
   text-decoration: none;
   transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  min-width: 210px;
 }
 
 .cta:hover {
   background: linear-gradient(to right, #0575e6, #00f260);
+}
+
+.cta:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+#cta2 {
+  display: none;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+#cta2.show {
+  display: inline-block;
+  animation: revealCTA 0.45s ease forwards;
+}
+
+@keyframes revealCTA {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .disclaimer {
@@ -122,30 +167,104 @@ ul li::before {
     padding: 1.5rem;
   }
 }
-
-  </style>
+</style>
 </head>
+
 <body>
-    <div class="video-bg">
+
+<div class="video-bg">
   <video autoplay muted loop playsinline>
     <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4">
   </video>
 </div>
 
-  <div class="card">
-    <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg" alt="Mentor Image">
-    <h2>Get Daily Stock Market Insights — Free on Telegram</h2>
-    <p>Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.</p>
-    <ul>
-      <li>Daily Nifty & BankNifty Levels</li>
-      <li>No Paid Tips – Purely Educational</li>
-      <li>5+ Years of Market Experience</li>
-      <li>50000+ Subscribers Trust Us Already</li>
-    </ul>
-    <a class="cta" href="https://t.me/+gFCusLtByEs3YWNl" target="_blank">JOIN FREE TELEGRAM</a>
-    <p class="disclaimer">
-      Disclaimer: This channel is for educational and informational purposes only. We do not provide investment advice or guaranteed returns. Trading in the stock market involves risk. Please consult your financial advisor before making any investment decisions.
-    </p>
-  </div>
+<div class="card">
+
+  <img
+    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
+    alt="Mentor Image"
+  >
+
+  <h2>Get Daily Stock Market Insights — Free on Telegram</h2>
+
+  <p>
+    Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.
+  </p>
+
+  <ul>
+    <li>Daily Nifty & BankNifty Levels</li>
+    <li>No Paid Tips – Purely Educational</li>
+    <li>5+ Years of Market Experience</li>
+    <li>50000+ Subscribers Trust Us Already</li>
+  </ul>
+
+  <!-- CTA #1 -->
+  <button
+    id="cta1"
+    class="cta"
+    type="button"
+    onclick="startCountdown()"
+  >
+    CONTINUE
+  </button>
+
+  <!-- CTA #2 - Hidden initially -->
+  <a
+    id="cta2"
+    class="cta"
+    href="https://t.me/+gFCusLtByEs3YWNl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    JOIN FREE TELEGRAM
+  </a>
+
+  <p class="disclaimer">
+    Disclaimer: This channel is for educational and informational purposes only.
+    We do not provide investment advice or guaranteed returns. Trading in the
+    stock market involves risk. Please consult your financial advisor before
+    making any investment decisions.
+  </p>
+
+</div>
+
+<script>
+let countdownRunning = false;
+
+function startCountdown() {
+
+  if (countdownRunning) return;
+
+  countdownRunning = true;
+
+  const cta1 = document.getElementById("cta1");
+  const cta2 = document.getElementById("cta2");
+
+  let seconds = 3;
+
+  cta1.disabled = true;
+  cta1.textContent = "Please wait... " + seconds;
+
+  const timer = setInterval(function () {
+
+    seconds--;
+
+    if (seconds > 0) {
+      cta1.textContent = "Please wait... " + seconds;
+    } else {
+
+      clearInterval(timer);
+
+      // Hide CTA #1
+      cta1.style.display = "none";
+
+      // Show CTA #2
+      cta2.classList.add("show");
+    }
+
+  }, 1000);
+}
+</script>
+
 </body>
 </html>
