@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -11,13 +12,17 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1757934301898861');
 fbq('track', 'PageView');
 </script>
 
 <noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
 />
 </noscript>
 <!-- End Meta Pixel Code -->
@@ -28,6 +33,7 @@ src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
 <title>Join Free Telegram Channel</title>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -118,7 +124,10 @@ ul li::before {
   color: white;
   font-size: 1rem;
   text-decoration: none;
-  transition: background 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    opacity 0.4s ease,
+    transform 0.4s ease;
   cursor: pointer;
   min-width: 210px;
 }
@@ -128,31 +137,28 @@ ul li::before {
 }
 
 .cta:disabled {
+  cursor: wait;
   opacity: 0.8;
-  cursor: not-allowed;
 }
 
+/* 
+   CTA #2:
+   - DOM mein permanently present
+   - Actual href active
+   - Initially invisible
+   - Countdown complete hone par visible
+*/
 #cta2 {
-  display: none;
   opacity: 0;
+  visibility: hidden;
   transform: translateY(8px);
 }
 
+/* CTA #2 visible state */
 #cta2.show {
-  display: inline-block;
-  animation: revealCTA 0.45s ease forwards;
-}
-
-@keyframes revealCTA {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .disclaimer {
@@ -162,35 +168,46 @@ ul li::before {
 }
 
 @media screen and (max-width: 480px) {
+
   .card {
     width: 90%;
     padding: 1.5rem;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- Background Video -->
 <div class="video-bg">
   <video autoplay muted loop playsinline>
     <source src="https://assets.mixkit.co/videos/9607/9607-720.mp4">
   </video>
 </div>
 
+
 <div class="card">
 
+  <!-- Profile Image -->
   <img
     src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
     alt="Mentor Image"
   >
 
-  <h2>Get Daily Stock Market Insights — Free on Telegram</h2>
+  <!-- Heading -->
+  <h2>
+    Get Daily Stock Market Insights — Free on Telegram
+  </h2>
 
+  <!-- Description -->
   <p>
     Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.
   </p>
 
+  <!-- Features -->
   <ul>
     <li>Daily Nifty & BankNifty Levels</li>
     <li>No Paid Tips – Purely Educational</li>
@@ -198,17 +215,25 @@ ul li::before {
     <li>50000+ Subscribers Trust Us Already</li>
   </ul>
 
-  <!-- CTA #1 -->
+
+  <!-- ================================= -->
+  <!-- CTA #1 — TRIGGER ONLY             -->
+  <!-- ================================= -->
+
   <button
     id="cta1"
     class="cta"
     type="button"
-    onclick="startCountdown()"
+    onclick="startCTAFlow()"
   >
     CONTINUE
   </button>
 
-  <!-- CTA #2 - Hidden initially -->
+
+  <!-- ================================= -->
+  <!-- CTA #2 — REAL TELEGRAM LINK       -->
+  <!-- ================================= -->
+
   <a
     id="cta2"
     class="cta"
@@ -219,6 +244,8 @@ ul li::before {
     JOIN FREE TELEGRAM
   </a>
 
+
+  <!-- Disclaimer -->
   <p class="disclaimer">
     Disclaimer: This channel is for educational and informational purposes only.
     We do not provide investment advice or guaranteed returns. Trading in the
@@ -228,42 +255,64 @@ ul li::before {
 
 </div>
 
+
 <script>
-let countdownRunning = false;
 
-function startCountdown() {
+let countdownStarted = false;
 
-  if (countdownRunning) return;
+function startCTAFlow() {
 
-  countdownRunning = true;
+  // Prevent multiple countdowns
+  if (countdownStarted) {
+    return;
+  }
+
+  countdownStarted = true;
 
   const cta1 = document.getElementById("cta1");
   const cta2 = document.getElementById("cta2");
 
-  let seconds = 3;
+  let countdown = 3;
 
+  // Disable CTA #1 during countdown
   cta1.disabled = true;
-  cta1.textContent = "Please wait... " + seconds;
+
+  cta1.textContent = "Please wait... " + countdown;
+
 
   const timer = setInterval(function () {
 
-    seconds--;
+    countdown--;
 
-    if (seconds > 0) {
-      cta1.textContent = "Please wait... " + seconds;
+    if (countdown > 0) {
+
+      cta1.textContent = "Please wait... " + countdown;
+
     } else {
 
       clearInterval(timer);
 
-      // Hide CTA #1
+
+      /*
+       * CTA #1 disappears
+       */
       cta1.style.display = "none";
 
-      // Show CTA #2
+
+      /*
+       * CTA #2 becomes visible.
+       *
+       * Its href has been active in the DOM
+       * from the beginning.
+       */
       cta2.classList.add("show");
+
     }
 
   }, 1000);
+
 }
+
 </script>
 
 </body>
