@@ -2,15 +2,37 @@
 <html lang="en">
 <head>
 
-<!-- Meta Pixel Code -->
+<!-- ==============================
+     META PIXEL
+================================ -->
+
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+  if(f.fbq)return;
+
+  n=f.fbq=function(){
+    n.callMethod ?
+    n.callMethod.apply(n,arguments) :
+    n.queue.push(arguments)
+  };
+
+  if(!f._fbq)f._fbq=n;
+
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+
+}
+(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1757934301898861');
@@ -25,20 +47,25 @@ fbq('track', 'PageView');
   src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
 />
 </noscript>
+
 <!-- End Meta Pixel Code -->
 
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>Join Free Telegram Channel</title>
 
 
 <style>
 
-/* =========================
+/* =================================
    RESET
-========================= */
+================================= */
 
 * {
   margin: 0;
@@ -47,12 +74,18 @@ fbq('track', 'PageView');
 }
 
 
-/* =========================
-   BODY / BACKGROUND
-========================= */
+/* =================================
+   BODY
+================================= */
 
 body {
+
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   overflow-x: hidden;
 
   font-family:
@@ -62,38 +95,38 @@ body {
     Verdana,
     sans-serif;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #ffffff;
 
   background:
     radial-gradient(
-      circle at 20% 20%,
-      rgba(0, 255, 170, 0.10),
+      circle at 15% 15%,
+      rgba(0,255,170,0.10),
       transparent 35%
     ),
+
     radial-gradient(
-      circle at 80% 80%,
-      rgba(0, 120, 255, 0.14),
+      circle at 85% 85%,
+      rgba(0,140,255,0.12),
       transparent 40%
     ),
+
     linear-gradient(
       135deg,
-      #02090c 0%,
-      #07151b 45%,
-      #06141d 100%
+      #02090d 0%,
+      #07171d 50%,
+      #031119 100%
     );
-
-  color: #ffffff;
 }
 
 
-/* =========================
+/* =================================
    BACKGROUND VIDEO
-========================= */
+================================= */
 
 .video-bg {
+
   position: fixed;
+
   inset: 0;
 
   width: 100vw;
@@ -104,53 +137,55 @@ body {
   overflow: hidden;
 }
 
-.video-bg::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(2, 12, 16, 0.88),
-      rgba(3, 19, 26, 0.78)
-    );
-
-  z-index: 1;
-}
-
 .video-bg video {
+
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
-  opacity: 0.20;
+  opacity: 0.18;
+}
+
+.video-bg::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,8,12,0.86),
+      rgba(2,18,25,0.82)
+    );
 }
 
 
-/* =========================
+/* =================================
    CARD
-========================= */
+================================= */
 
 .card {
 
-  width: 100%;
+  position: relative;
+
+  width: calc(100% - 32px);
+
   max-width: 390px;
 
-  margin: 20px;
-
-  padding: 32px 28px;
+  padding: 32px 27px;
 
   text-align: center;
 
-  border-radius: 26px;
+  border-radius: 25px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.105),
       rgba(255,255,255,0.045)
     );
 
@@ -160,19 +195,19 @@ body {
   -webkit-backdrop-filter: blur(18px);
 
   box-shadow:
-    0 25px 70px rgba(0,0,0,0.45),
+    0 25px 70px rgba(0,0,0,0.55),
     inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 
-/* =========================
+/* =================================
    PROFILE IMAGE
-========================= */
+================================= */
 
 .card img {
 
-  width: 104px;
-  height: 104px;
+  width: 105px;
+  height: 105px;
 
   object-fit: cover;
 
@@ -180,54 +215,51 @@ body {
 
   margin-bottom: 18px;
 
-  border: 3px solid rgba(0,255,170,0.65);
+  border: 3px solid #00e99a;
 
   box-shadow:
-    0 0 0 6px rgba(0,255,170,0.06),
-    0 12px 30px rgba(0,0,0,0.35);
+    0 0 0 6px rgba(0,233,154,0.07),
+    0 12px 35px rgba(0,0,0,0.45);
 }
 
 
-/* =========================
+/* =================================
    HEADING
-========================= */
+================================= */
 
 h2 {
+
+  margin-bottom: 14px;
 
   font-size: 25px;
 
   line-height: 1.25;
 
-  margin-bottom: 14px;
-
   font-weight: 750;
 
   color: #ffffff;
-
-  text-shadow:
-    0 2px 12px rgba(0,0,0,0.35);
 }
 
 
-/* =========================
+/* =================================
    DESCRIPTION
-========================= */
+================================= */
 
-.card > p:not(.disclaimer) {
+.description {
+
+  margin-bottom: 21px;
 
   color: rgba(255,255,255,0.76);
 
   font-size: 15px;
 
   line-height: 1.55;
-
-  margin-bottom: 20px;
 }
 
 
-/* =========================
+/* =================================
    FEATURES
-========================= */
+================================= */
 
 ul {
 
@@ -257,79 +289,95 @@ ul li {
 
 ul li::before {
 
-  content: "\2714";
+  content: "✓";
 
   position: absolute;
 
   left: 0;
+
   top: 0;
 
   width: 19px;
   height: 19px;
 
   display: flex;
-  align-items: center;
+
   justify-content: center;
+  align-items: center;
 
   border-radius: 50%;
 
-  background: rgba(0,255,160,0.13);
+  background: rgba(0,255,160,0.12);
 
-  color: #00f59b;
+  color: #00ef99;
 
   font-size: 12px;
 
-  font-weight: bold;
+  font-weight: 800;
 }
 
 
-/* =========================
+/* =================================
+   CTA WRAPPER
+================================= */
+
+.cta-area {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =================================
    COMMON CTA
-========================= */
+================================= */
 
 .cta {
 
   width: 100%;
 
-  min-height: 52px;
+  min-height: 53px;
 
-  display: inline-flex;
+  display: flex;
 
   align-items: center;
   justify-content: center;
-
-  padding: 14px 20px;
 
   border: 0;
 
   border-radius: 30px;
 
-  color: #ffffff;
+  padding: 14px 20px;
+
+  font-family: inherit;
 
   font-size: 15px;
 
-  font-weight: 700;
+  font-weight: 750;
 
-  letter-spacing: 0.3px;
+  letter-spacing: 0.25px;
 
-  text-decoration: none;
+  color: #ffffff;
 
   cursor: pointer;
 
   background:
     linear-gradient(
       100deg,
-      #00e889,
-      #00bfff
+      #00e98c,
+      #00aeea
     );
 
   box-shadow:
-    0 10px 28px rgba(0,205,180,0.22);
+    0 10px 28px rgba(0,210,180,0.22);
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    opacity 0.35s ease;
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .cta:hover {
@@ -337,7 +385,7 @@ ul li::before {
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 34px rgba(0,205,180,0.30);
+    0 14px 34px rgba(0,210,180,0.30);
 }
 
 .cta:active {
@@ -346,87 +394,139 @@ ul li::before {
 }
 
 
-/* =========================
+/* =================================
    CTA 1
-========================= */
+================================= */
 
 #cta1 {
 
-  appearance: none;
-  -webkit-appearance: none;
-
-  font-family: inherit;
+  background:
+    linear-gradient(
+      100deg,
+      #00e98c,
+      #00aeea
+    );
 }
 
 
-/* =========================
-   CTA 2
-   IMPORTANT:
-   NO display:none
-   NO visibility:hidden
-   NO pointer-events:none
+/* =================================
+   CTA 1 COUNTDOWN
+================================= */
 
-   It remains a REAL clickable
-   DOM element from page load.
-========================= */
+#cta1.counting {
+
+  cursor: wait;
+
+  opacity: 0.82;
+
+  background:
+    linear-gradient(
+      100deg,
+      #087e68,
+      #096b8e
+    );
+}
+
+
+/* =================================
+   CTA 2
+================================= */
 
 #cta2 {
 
-  opacity: 1;
+  background:
+    linear-gradient(
+      100deg,
+      #008f68,
+      #007fc2
+    );
 
-  transform: translateY(8px);
-
-  /*
-    The element remains in the DOM
-    and its href remains active.
-  */
+  position: relative;
 }
 
 
-/* CTA 2 visible after countdown */
+/* =================================
+   CTA 2 LOCKED STATE
+================================= */
 
-#cta2.show {
+#cta2.locked {
 
-  opacity: 1;
+  opacity: 0.62;
 
-  transform: translateY(0);
+  background:
+    linear-gradient(
+      100deg,
+      #176052,
+      #15536c
+    );
 }
 
 
-/* =========================
+/* =================================
+   CTA 2 ACTIVE
+================================= */
+
+#cta2.active {
+
+  opacity: 1;
+
+  background:
+    linear-gradient(
+      100deg,
+      #00e98c,
+      #00aeea
+    );
+
+  box-shadow:
+    0 10px 28px rgba(0,210,180,0.25);
+}
+
+
+/* =================================
+   STATUS MESSAGE
+================================= */
+
+#statusMessage {
+
+  min-height: 19px;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  color: rgba(255,255,255,0.60);
+
+  transition: opacity 0.2s ease;
+}
+
+
+/* =================================
    DISCLAIMER
-========================= */
+================================= */
 
 .disclaimer {
 
-  margin-top: 18px;
+  margin-top: 17px;
 
   font-size: 11px;
 
   line-height: 1.55;
 
-  color: rgba(255,255,255,0.52);
+  color: rgba(255,255,255,0.48);
 }
 
 
-/* =========================
+/* =================================
    MOBILE
-========================= */
+================================= */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
 
   .card {
 
-    max-width: 360px;
-
-    padding: 28px 22px;
+    padding: 28px 21px;
 
     border-radius: 23px;
-  }
-
-  h2 {
-
-    font-size: 23px;
   }
 
   .card img {
@@ -435,18 +535,24 @@ ul li::before {
     height: 94px;
   }
 
+  h2 {
+
+    font-size: 23px;
+  }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     BACKGROUND VIDEO
-========================= -->
+<!-- =================================
+     BACKGROUND
+================================= -->
 
 <div class="video-bg">
 
@@ -468,14 +574,14 @@ ul li::before {
 
 
 
-<!-- =========================
-     MAIN CARD
-========================= -->
+<!-- =================================
+     CARD
+================================= -->
 
 <div class="card">
 
 
-  <!-- PROFILE IMAGE -->
+  <!-- PROFILE -->
 
   <img
     src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
@@ -492,7 +598,7 @@ ul li::before {
 
   <!-- DESCRIPTION -->
 
-  <p>
+  <p class="description">
     Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.
   </p>
 
@@ -521,49 +627,62 @@ ul li::before {
 
 
 
-  <!-- ==================================
-       CTA #1
-       VISIBLE INITIALLY
-       CLICK = 3 SECOND TRIGGER
-  =================================== -->
+  <!-- =================================
+       TWO SEPARATE BUTTONS
+  ================================== -->
 
-  <button
-    id="cta1"
-    class="cta"
-    type="button"
-    onclick="startCTAFlow()"
-  >
-    CONTINUE
-  </button>
+  <div class="cta-area">
 
 
+    <!-- ===============================
+         CTA 1
+         FIRST CLICK
+    ================================ -->
 
-  <!-- ==================================
-       CTA #2
-       
-       IMPORTANT:
-       - REAL <a> ELEMENT
-       - REAL HREF
-       - CLICKABLE FROM PAGE LOAD
-       - ONLY opacity:0 INITIALLY
-       - NO display:none
-       - NO visibility:hidden
-       - NO pointer-events:none
-  =================================== -->
-
-  <a
-    id="cta2"
-    class="cta"
-    href="https://t.me/+gFCusLtByEs3YWNl"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    JOIN FREE TELEGRAM
-  </a>
+    <button
+      id="cta1"
+      class="cta"
+      type="button"
+    >
+      CONTINUE
+    </button>
 
 
+    <!-- ===============================
+         CTA 2
+         SECOND CLICK
+         
+         Always present as a real
+         clickable button.
+         
+         Before CTA 1:
+         click = asks user to complete
+         first step.
+         
+         After CTA 1:
+         click = opens Telegram.
+    ================================ -->
 
-  <!-- DISCLAIMER -->
+    <button
+      id="cta2"
+      class="cta locked"
+      type="button"
+    >
+      JOIN FREE TELEGRAM
+    </button>
+
+
+    <!-- STATUS -->
+
+    <div id="statusMessage"></div>
+
+  </div>
+
+
+
+  <!-- =================================
+       DISCLAIMER
+  ================================== -->
 
   <p class="disclaimer">
 
@@ -581,52 +700,53 @@ ul li::before {
 
 <script>
 
-/*
-==================================================
-CTA FLOW
+/* ==========================================
+   CTA SYSTEM
+========================================== */
 
-CTA #2 remains a real clickable <a> element.
-Only its opacity changes.
+const cta1 = document.getElementById("cta1");
 
-CTA #1 is the trigger.
-==================================================
-*/
+const cta2 = document.getElementById("cta2");
+
+const statusMessage =
+  document.getElementById("statusMessage");
+
+
+let firstStepCompleted = false;
 
 let countdownRunning = false;
 
 
-function startCTAFlow() {
+/* ==========================================
+   FIRST CTA
+
+   User must click this first.
+========================================== */
+
+cta1.addEventListener("click", function () {
 
   if (countdownRunning) {
     return;
   }
 
+  if (firstStepCompleted) {
+    return;
+  }
+
   countdownRunning = true;
 
-
-  const cta1 = document.getElementById("cta1");
-
-  const cta2 = document.getElementById("cta2");
-
+  cta1.classList.add("counting");
 
   let seconds = 3;
 
-
-  /*
-    Disable only CTA #1 while countdown
-    is running.
-  */
-
-  cta1.disabled = true;
-
-
   cta1.textContent =
-    "Please wait... " + seconds;
+    "PLEASE WAIT... " + seconds;
 
+  statusMessage.textContent =
+    "Preparing the next step...";
 
 
   const timer = setInterval(function () {
-
 
     seconds--;
 
@@ -634,7 +754,7 @@ function startCTAFlow() {
     if (seconds > 0) {
 
       cta1.textContent =
-        "Please wait... " + seconds;
+        "PLEASE WAIT... " + seconds;
 
     }
 
@@ -644,34 +764,82 @@ function startCTAFlow() {
       clearInterval(timer);
 
 
-      /*
-      ==========================================
-      CTA #1 disappears
-      ==========================================
-      */
+      /* ==============================
+         FIRST STEP COMPLETE
+      ============================== */
+
+      firstStepCompleted = true;
+
+      countdownRunning = false;
+
+
+      /* ==============================
+         Change CTA 1
+      ============================== */
 
       cta1.style.display = "none";
 
 
-      /*
-      ==========================================
-      CTA #2 becomes visible
+      /* ==============================
+         Activate CTA 2
+      ============================== */
 
-      IMPORTANT:
-      We are NOT enabling it here.
-      It was already a normal clickable
-      <a> element from the beginning.
-      ==========================================
-      */
+      cta2.classList.remove("locked");
 
-      cta2.classList.add("show");
+      cta2.classList.add("active");
+
+
+      cta2.textContent =
+        "JOIN FREE TELEGRAM";
+
+
+      statusMessage.textContent =
+        "Step 1 complete — click below to continue.";
 
     }
 
-
   }, 1000);
 
-}
+});
+
+
+
+/* ==========================================
+   SECOND CTA
+
+   Always a real clickable button.
+
+   Before Step 1:
+   does NOT open Telegram.
+
+   After Step 1:
+   opens Telegram.
+========================================== */
+
+cta2.addEventListener("click", function () {
+
+
+  if (!firstStepCompleted) {
+
+    statusMessage.textContent =
+      "Please complete Step 1 first.";
+
+    return;
+  }
+
+
+  /*
+     Second click:
+     Open the actual Telegram destination.
+  */
+
+  window.open(
+    "https://t.me/+gFCusLtByEs3YWNl",
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+});
 
 </script>
 
