@@ -1,118 +1,545 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
-<!-- Meta Pixel Code -->
+<!-- ==============================
+     META PIXEL
+================================ -->
+
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+  if(f.fbq)return;
+
+  n=f.fbq=function(){
+    n.callMethod ?
+    n.callMethod.apply(n,arguments) :
+    n.queue.push(arguments)
+  };
+
+  if(!f._fbq)f._fbq=n;
+
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+
+}
+(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1757934301898861');
 fbq('track', 'PageView');
 </script>
 
 <noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=1757934301898861&ev=PageView&noscript=1"
 />
 </noscript>
+
 <!-- End Meta Pixel Code -->
 
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
 
-<title>Join Telegram Channel</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Join Free Telegram Channel</title>
+
 
 <style>
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =================================
+   RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.elementor img {
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  height: auto;
-  max-width: 100%;
-  border-radius: 90px;
+
+/* =================================
+   BODY
+================================= */
+
+body {
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;
+
+  font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(0,255,170,0.10),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(0,140,255,0.12),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      135deg,
+      #02090d 0%,
+      #07171d 50%,
+      #031119 100%
+    );
 }
+
+
+/* =================================
+   BACKGROUND VIDEO
+================================= */
+
+.video-bg {
+
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -2;
+
+  overflow: hidden;
+}
+
+.video-bg video {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.18;
+}
+
+.video-bg::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,8,12,0.86),
+      rgba(2,18,25,0.82)
+    );
+}
+
+
+/* =================================
+   CARD
+================================= */
 
 .card {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 1rem;
-  padding: 2rem;
-  max-width: 400px;
-  width: 100%;
+
+  position: relative;
+
+  width: calc(100% - 32px);
+
+  max-width: 390px;
+
+  padding: 32px 27px;
+
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.105),
+      rgba(255,255,255,0.045)
+    );
+
+  border: 1px solid rgba(255,255,255,0.13);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
-.btn-telegram {
+
+/* =================================
+   PROFILE IMAGE
+================================= */
+
+.card img {
+
+  width: 105px;
+  height: 105px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 18px;
+
+  border: 3px solid #00e99a;
+
+  box-shadow:
+    0 0 0 6px rgba(0,233,154,0.07),
+    0 12px 35px rgba(0,0,0,0.45);
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+h2 {
+
+  margin-bottom: 14px;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  font-weight: 750;
+
+  color: #ffffff;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.description {
+
+  margin-bottom: 21px;
+
+  color: rgba(255,255,255,0.76);
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+
+/* =================================
+   FEATURES
+================================= */
+
+ul {
+
+  list-style: none;
+
+  text-align: left;
+
+  margin-bottom: 24px;
+
+  padding: 0;
+}
+
+ul li {
+
+  position: relative;
+
+  padding-left: 28px;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  color: rgba(255,255,255,0.86);
+}
+
+ul li::before {
+
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 19px;
+  height: 19px;
+
   display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(0,255,160,0.12);
+
+  color: #00ef99;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* =================================
+   CTA WRAPPER
+================================= */
+
+.cta-area {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =================================
+   COMMON CTA
+================================= */
+
+.cta {
+
+  width: 100%;
+
+  min-height: 53px;
+
+  display: flex;
+
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.75rem;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(90deg, #0088cc, #00bcd4);
-  transition: 0.3s;
-  width: 100%;
+
+  border: 0;
+
+  border-radius: 30px;
+
+  padding: 14px 20px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.25px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      100deg,
+      #00e98c,
+      #00aeea
+    );
+
+  box-shadow:
+    0 10px 28px rgba(0,210,180,0.22);
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.btn-telegram:hover {
-  background: linear-gradient(90deg, #00bcd4, #0088cc);
+.cta:hover {
+
   transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 34px rgba(0,210,180,0.30);
 }
 
-.feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  font-size: 0.95rem;
-}
+.cta:active {
 
-
-/* =========================================
-   SECOND BUTTON - SAME AS CARD
-   ========================================= */
-
-#telegram-but {
-  background: rgb(255 255 255 / 9%);
-  
-  border: none;
-  box-shadow: none;
-}
-
-#telegram-but:hover {
-  background: rgba(255, 255, 255, 0.7);
-  color: #1f2937;
-  transform: translateY(-2px);
+  transform: scale(0.98);
 }
 
 
-/* SVG ICON COLOR */
+/* =================================
+   CTA 1
+================================= */
 
-#telegram-but svg {
-  color: #1f2937;
-  fill: currentColor;
+#cta1 {
+
+  background:
+    linear-gradient(
+      100deg,
+      #00e98c,
+      #00aeea
+    );
+}
+
+
+/* =================================
+   CTA 1 COUNTDOWN
+================================= */
+
+#cta1.counting {
+
+  cursor: wait;
+
+  opacity: 0.82;
+
+  background:
+    linear-gradient(
+      100deg,
+      #087e68,
+      #096b8e
+    );
+}
+
+
+/* =================================
+   CTA 2
+================================= */
+
+#cta2 {
+
+  background:
+    linear-gradient(
+      100deg,
+      #008f68,
+      #007fc2
+    );
+
+  position: relative;
+}
+
+
+/* =================================
+   CTA 2 LOCKED STATE
+================================= */
+
+#cta2.locked {
+
+  opacity: 0.62;
+
+  background:
+    linear-gradient(
+      100deg,
+      #176052,
+      #15536c
+    );
+}
+
+
+/* =================================
+   CTA 2 ACTIVE
+================================= */
+
+#cta2.active {
+
+  opacity: 1;
+
+  background:
+    linear-gradient(
+      100deg,
+      #00e98c,
+      #00aeea
+    );
+
+  box-shadow:
+    0 10px 28px rgba(0,210,180,0.25);
+}
+
+
+/* =================================
+   STATUS MESSAGE
+================================= */
+
+#statusMessage {
+
+  min-height: 19px;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  color: rgba(255,255,255,0.60);
+
+  transition: opacity 0.2s ease;
+}
+
+
+/* =================================
+   DISCLAIMER
+================================= */
+
+.disclaimer {
+
+  margin-top: 17px;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: rgba(255,255,255,0.48);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media screen and (max-width:480px) {
+
+  .card {
+
+    padding: 28px 21px;
+
+    border-radius: 23px;
+  }
+
+  .card img {
+
+    width: 94px;
+    height: 94px;
+  }
+
+  h2 {
+
+    font-size: 23px;
+  }
+
 }
 
 </style>
@@ -122,133 +549,300 @@ body {
 
 <body>
 
-<div class="card">
 
-  <!-- Profile Image -->
+<!-- =================================
+     BACKGROUND
+================================= -->
 
-  <div class="w-32 h-32 mx-auto mb-4">
+<div class="video-bg">
 
-    <img
-      src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/06/IMG-20250627-WA0004.jpg"
-      alt="Profile"
-      class="w-full h-full rounded-full object-cover shadow-lg border-4 border-white rounded-xxl"
-    >
-
-  </div>
-
-
-  <!-- Heading -->
-
-  <h1 class="text-xl font-extrabold text-gray-800 mb-1">
-    BADSHAH BROKING OFFICIAL 💸🏆
-  </h1>
-
-
-  <!-- Experience -->
-
-  <p class="text-red-600 font-semibold mb-4">
-    📊 Experience of 27 years❇️ 📊
-  </p>
-
-
-  <!-- FIRST TELEGRAM BUTTON -->
-
-  <a
-    href=""
-    target="_blank"
-    class="btn-telegram mb-6"
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
   >
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      fill="currentColor"
-      viewBox="0 0 16 16"
+    <source
+      src="https://assets.mixkit.co/videos/9607/9607-720.mp4"
+      type="video/mp4"
     >
-      <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-    </svg>
 
-    JOIN TELEGRAM 💬
-
-  </a>
-
-
-  <!-- SECOND TELEGRAM BUTTON -->
-
-  <a
-    href="https://t.me/+zsuNuK6zZSJhNzY1"
-    target="_blank"
-    id="telegram-but"
-    class="btn-telegram mb-6"
-  >
-
-    <!-- <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      fill="currentColor"
-      viewBox="0 0 16 16"
-    >
-      <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-    </svg> -->
-
-    
-
-  </a>
-
-
-  <!-- Features -->
-
-  <p class="text-red-600 font-bold mb-4">
-    💎 DAILY PROFIT GURANTEE 💎
-  </p>
-
-
-  <div class="text-left space-y-3 text-gray-800 mb-6">
-
-    <div class="feature">
-      📊
-      <span>
-        <b>Live Daily Trades</b> – From my portfolio to yours!
-      </span>
-    </div>
-
-    <div class="feature">
-      🔥
-      <span>
-        <b>Exclusive Signals</b> – Get the same trades I take!
-      </span>
-    </div>
-
-    <div class="feature">
-      💯
-      <span>
-        <b>High Accuracy</b> – Consistent proven strategy!
-      </span>
-    </div>
-
-    <div class="feature">
-      💡
-      <span>
-        <b>Real-Time Updates</b> – Instant market alerts!
-      </span>
-    </div>
-
-  </div>
-
-
-  <!-- Hindi Section -->
-
-  <h2 class="text-lg font-bold text-gray-800 mb-2">
-    क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
-  </h2>
-
-  <p class="text-red-600 font-semibold">
-    अगर हां तो दिए गए टेलीग्राम बटन पर दबाएं !
-  </p>
+  </video>
 
 </div>
+
+
+
+<!-- =================================
+     CARD
+================================= -->
+
+<div class="card">
+
+
+  <!-- PROFILE -->
+
+  <img
+    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
+    alt="Mentor Image"
+  >
+
+
+  <!-- TITLE -->
+
+  <h2>
+    Get Daily Stock Market Insights — Free on Telegram
+  </h2>
+
+
+  <!-- DESCRIPTION -->
+
+  <p class="description">
+    Get market updates, potential trades, and expert analysis straight to your phone — absolutely free.
+  </p>
+
+
+  <!-- FEATURES -->
+
+  <ul>
+
+    <li>
+      Daily Nifty &amp; BankNifty Levels
+    </li>
+
+    <li>
+      No Paid Tips – Purely Educational
+    </li>
+
+    <li>
+      5+ Years of Market Experience
+    </li>
+
+    <li>
+      50000+ Subscribers Trust Us Already
+    </li>
+
+  </ul>
+
+
+
+  <!-- =================================
+       TWO SEPARATE BUTTONS
+  ================================== -->
+
+  <div class="cta-area">
+
+
+    <!-- ===============================
+         CTA 1
+         FIRST CLICK
+    ================================ -->
+
+    <button
+      id="cta1"
+      class="cta"
+      type="button"
+    >
+      CONTINUE
+    </button>
+
+
+    <!-- ===============================
+         CTA 2
+         SECOND CLICK
+         
+         Always present as a real
+         clickable button.
+         
+         Before CTA 1:
+         click = asks user to complete
+         first step.
+         
+         After CTA 1:
+         click = opens Telegram.
+    ================================ -->
+
+    <button
+      id="cta2"
+      class="cta locked"
+      type="button"
+    >
+      JOIN FREE TELEGRAM
+    </button>
+
+
+    <!-- STATUS -->
+
+    <div id="statusMessage"></div>
+
+  </div>
+
+
+
+  <!-- =================================
+       DISCLAIMER
+  ================================== -->
+
+  <p class="disclaimer">
+
+    Disclaimer: This channel is for educational and informational purposes only.
+    We do not provide investment advice or guaranteed returns. Trading in the
+    stock market involves risk. Please consult your financial advisor before
+    making any investment decisions.
+
+  </p>
+
+
+</div>
+
+
+
+<script>
+
+/* ==========================================
+   CTA SYSTEM
+========================================== */
+
+const cta1 = document.getElementById("cta1");
+
+const cta2 = document.getElementById("cta2");
+
+const statusMessage =
+  document.getElementById("statusMessage");
+
+
+let firstStepCompleted = false;
+
+let countdownRunning = false;
+
+
+/* ==========================================
+   FIRST CTA
+
+   User must click this first.
+========================================== */
+
+cta1.addEventListener("click", function () {
+
+  if (countdownRunning) {
+    return;
+  }
+
+  if (firstStepCompleted) {
+    return;
+  }
+
+  countdownRunning = true;
+
+  cta1.classList.add("counting");
+
+  let seconds = 3;
+
+  cta1.textContent =
+    "PLEASE WAIT... " + seconds;
+
+  statusMessage.textContent =
+    "Preparing the next step...";
+
+
+  const timer = setInterval(function () {
+
+    seconds--;
+
+
+    if (seconds > 0) {
+
+      cta1.textContent =
+        "PLEASE WAIT... " + seconds;
+
+    }
+
+
+    else {
+
+      clearInterval(timer);
+
+
+      /* ==============================
+         FIRST STEP COMPLETE
+      ============================== */
+
+      firstStepCompleted = true;
+
+      countdownRunning = false;
+
+
+      /* ==============================
+         Change CTA 1
+      ============================== */
+
+      cta1.style.display = "none";
+
+
+      /* ==============================
+         Activate CTA 2
+      ============================== */
+
+      cta2.classList.remove("locked");
+
+      cta2.classList.add("active");
+
+
+      cta2.textContent =
+        "JOIN FREE TELEGRAM";
+
+
+      statusMessage.textContent =
+        "Step 1 complete — click below to continue.";
+
+    }
+
+  }, 1000);
+
+});
+
+
+
+/* ==========================================
+   SECOND CTA
+
+   Always a real clickable button.
+
+   Before Step 1:
+   does NOT open Telegram.
+
+   After Step 1:
+   opens Telegram.
+========================================== */
+
+cta2.addEventListener("click", function () {
+
+
+  if (!firstStepCompleted) {
+
+    statusMessage.textContent =
+      "Please complete Step 1 first.";
+
+    return;
+  }
+
+
+  /*
+     Second click:
+     Open the actual Telegram destination.
+  */
+
+  window.open(
+    "https://t.me/+gFCusLtByEs3YWNl",
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+});
+
+</script>
+
 
 </body>
 </html>
